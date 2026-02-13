@@ -1,0 +1,14 @@
+name: configuration variable testing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greeting job:
+    steps:
+      - name: "Project details"
+      env:
+        date: 13-Feb
+      run: echo "$name is started on $date with ${{vars.PROJECT}} for $owner
+      env:
+        owner: WHO
