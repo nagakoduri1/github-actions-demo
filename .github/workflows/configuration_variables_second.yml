@@ -1,0 +1,21 @@
+name: configuration variable testing
+
+on:
+  workflow_dispatch:
+
+env:
+  owner: WHO
+
+jobs:
+  project_job:
+    runs-on: ubuntu-latest
+    env:
+      date: 13Feb'26
+    steps:
+      - name: "Project_details"
+        run: echo "$owner started ${{vars.project_id}} on $date by $CM"
+        env:
+          CM: koduri
+        
+
+    
