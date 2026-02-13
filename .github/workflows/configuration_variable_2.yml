@@ -1,0 +1,11 @@
+name: test configuration variable
+
+on:
+  workflow_dispatch
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Project details"
+        run: echo "Project_id is ${{vars.PROJECT_ID}}!"
