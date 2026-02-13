@@ -1,0 +1,19 @@
+name: Nagarjuna
+
+on:
+  workflow_dispatch
+
+env:
+  City: Chennai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "SAY CHEESE"
+        run: echo "hi there_ $name is using $mobile in $City" 
+        env:
+          mobile: Samsung        
+          
+
