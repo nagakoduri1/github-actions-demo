@@ -1,14 +1,14 @@
-name: configuration variable testing
+name: configuration_variable_example
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
-  greeting job:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      date: 13Feb
     steps:
-      - name: "Project details"
-      env:
-        date: 13-Feb
-      run: echo "$name is started on $date with ${{vars.PROJECT}} for $owner
-      env:
-        owner: WHO
+      - name: Project details
+        run: echo "Sponsor for the project is $owner & project id is ${{vars.PROJECT}}"
+        env:
+          owner: WHO
